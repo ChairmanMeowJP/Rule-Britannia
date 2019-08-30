@@ -54,6 +54,9 @@
 #WUS = "countries/Worcester.txt"
 #YKS = "countries/Yorkshire.txt"
 
+#LCS = "countries/Lancaster.txt"
+#YRK = "countries/York.txt"
+
 #Scotland
 #SCO = "countries/Scotland.txt"
 
