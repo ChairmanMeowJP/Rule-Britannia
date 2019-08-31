@@ -24,6 +24,7 @@
 #KNT = "countries/Kent.txt"
 #LEI = "countries/Leicester.txt"
 #LNC = "countries/Lincoln.txt"
+#LSH = "countries/Lancashire.txt"
 #MAR = "countries/March.txt"
 #MER = "countries/Mercia.txt"
 #MID = "countries/Middlesex.txt"
@@ -51,6 +52,10 @@
 #WSM = "countries/Westmorland.txt"
 #WTS = "countries/Wiltshire.txt"
 #WUS = "countries/Worcester.txt"
+#YKS = "countries/Yorkshire.txt"
+
+#LCS = "countries/Lancaster.txt"
+#YRK = "countries/York.txt"
 
 #Scotland
 #SCO = "countries/Scotland.txt"
