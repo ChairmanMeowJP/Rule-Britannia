@@ -63,3 +63,18 @@
 #Ireland
 #Vikings
 HAR = "countries/Harold.txt"
+#Desmond
+#DES = "countries/Desmond.txt"
+
+#BLT = "countries/Baltimore.txt"
+#BNC = "countries/Ballynacarriga.txt"
+#BRO = "countries/Barryoge.txt"
+#BRR = "countries/Barryroe.txt"
+#CBR = "countries/Carbery.txt"
+#CCH = "countries/Clancahil.txt"
+#CLL = "countries/Clanloughlin.txt"
+#DRM = "countries/Drumnea.txt"
+#IVH = "countries/Ivahagh.txt"
+#KLS = "countries/Kilshallow.txt"
+#KNM = "countries/Kinelmeaky.txt"
+#RCB = "countries/Rosscarbery.txt"
