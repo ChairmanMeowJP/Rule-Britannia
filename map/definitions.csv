@@ -1030,6 +1030,7 @@ province;red;green;blue;x;x
 1029;230;140;10;Auchengen;x
 1030;80;220;110;Biggar;x
 1031;160;70;20;Stonehouse;x
+1032;240;150;120;FlannanIsles;x
 1033;10;230;30;Strathaver;x
 1034;90;80;130;Douglas;x
 1035;170;160;40;Coulter;x
@@ -1648,5 +1649,5 @@ province;red;green;blue;x;x
 1648;19;209;212;LochNess;x
 1649;4;200;220;LochMonar;x
 1650;12;210;205;LochMaree;x
-1650;20;201;213;LochShin;x
-61;5;211;221;Base;x
+1651;20;201;213;LochShin;x
+1652;5;211;221;Base;x
