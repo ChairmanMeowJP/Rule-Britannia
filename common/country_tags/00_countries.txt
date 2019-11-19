@@ -93,3 +93,12 @@ HAR = "countries/Harold.txt"
 #MNX = "countries/Manshanaglass.txt"
 #MSK = "countries/Muskerry.txt"
 #RCB = "countries/Rosscarbery.txt"
+
+#Wales
+#WAL = "countries/Wales.txt"
+#Flintshire
+#FLI = "countries/Flint.txt"
+#HPD = "countries/Hopedale.txt"
+#HWD = "countries/Hawarden.txt"
+#MLD = "countries/Mold.txt"
+#MSS = "countries/Maelor_Saesneg.txt"
