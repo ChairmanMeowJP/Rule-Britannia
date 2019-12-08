@@ -262,6 +262,7 @@ province;red;green;blue;x;x
 261;230;110;160;Horncastle;x
 262;80;190;70;Calcewath;x
 263;160;40;170;Bolingbroke;x
+264;240;120;80;Birmingham;x
 265;10;200;180;Wolmersty;x
 266;90;50;90;Kirton;x
 267;170;130;0;Elloe;x
@@ -314,7 +315,6 @@ province;red;green;blue;x;x
 314;90;210;140;NorthSeisdon;x
 315;170;60;50;SouthSeisdon;x
 316;20;140;150;Dudley;x
-
 317;100;220;60;Oswestry;x
 318;180;70;160;Pimhill;x
 319;30;150;70;NorthBradford;x
