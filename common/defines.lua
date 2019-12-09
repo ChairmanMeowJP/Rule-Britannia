@@ -1,8 +1,8 @@
 NDefines = {
 
 NGame = {
-	START_DATE = "1444.11.11",
-	END_DATE = "1821.1.2",
+	START_DATE = "1169.5.1",
+	END_DATE = "1707.5.1",
 	MAX_RANDOM_NEW_WORLD = "1492.1.1",
 
 	GREAT_POWER_FRENZY_START = "1700.1.1",	-- Latest date for the start of the Great Power Frenzy (struggle).
@@ -19,6 +19,9 @@ NGame = {
 	MAX_OBSERVERS = 10,						-- Max is 100
 
 	SIZE_LIMIT_FOR_ISLANDS = 25000			-- Threshold in pixels to define what is an island and what is a continent
+	
+	DAYS_BEHIND_PAUSE = 25,					-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will pause
+	DAYS_BEHIND_LOWER_SPEED = 10,			-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will slow down
 },
 
 NDiplomacy = {
@@ -320,7 +323,8 @@ NDiplomacy = {
 	CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.15,	-- Yearly change of Mandate for each hundred development tributary state.
 	CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_NONTRIBUTARY_DEV = -0.3,	-- Yearly change of Mandate for each hundred development of neighbouring states that are not the Emperor's tributaries
 	CELESTIAL_EMPIRE_MANDATE_FROM_DEFENDING = 5,	-- How much Mandate is gained when successfully defending the Emperor title.
-
+	CELESTIAL_EMPIRE_MANDATE_PER_5_LOANS = -0.36,	-- Yearly change of Mandate for every 5 loans.
+	
 	REMOVE_ELECTORATE_INFLUENCE_COST = 10,			-- The amount of IA Remove Electorate costs.
 	GRANT_ELECTORATE_INFLUENCE = 0,					-- The amount of AI Grant Electorate gives.
 	GRANT_FREECITY_INFLUENCE = 0,					-- The amount of IA Grant Free Gity gives.
@@ -985,6 +989,9 @@ NMilitary = {
 	MAX_SAILOR_LACK_ATTRITION = 1,
 	SAILOR_MAINTAINANCE = 0.02,		-- of build cost.
 	BANNER_DISCIPLINE_BONUS = 0.1,
+	BANNER_MANPOWER_USAGE = 0.25,
+	BANNER_REINFORCE_SPEED = -0.5,
+	BANNER_MAINTENANCE_COST = 0.5,	
 	BANNER_AGE_MULTIPLIER = 0.50,
 	FORT_DEVASTATION_IMPACT = -10,				-- multiplied by fortlevel/max fortlevel in area per year.
 	REVANCHISM_DEVASTATION_IMPACT = -0.02,			-- 100 revanschism is -2 a year.
