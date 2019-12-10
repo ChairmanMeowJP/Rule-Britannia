@@ -107,3 +107,8 @@ HAR = "countries/Harold.txt"
 #HWD = "countries/Hawarden.txt"
 #MLD = "countries/Mold.txt"
 #MSS = "countries/Maelor_Saesneg.txt"
+#Denbighshire
+#BAY = "countries/Bromfield_and_Yale.txt"
+#CRK = "countries/Chirk.txt"
+#DNB = "countries/Denbigh.txt"
+#RTN = "countries/Ruthin.txt"
