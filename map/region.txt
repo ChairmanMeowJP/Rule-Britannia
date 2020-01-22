@@ -1,0 +1,41 @@
+
+england_region = {
+	areas = {
+		northumberland_area
+		cumberland_area
+		lancashire_area
+		westmoreland_area
+		north_riding_area
+		east_riding_area
+		west_riding_area
+		cheshire_area
+		herefordshire_area
+		shropshire_area
+		lindsey_area
+		holland_area
+		kesteven_area
+		rutlandshire_area
+		nottinghamshire_area
+		derbyshire_area
+		staffordshire_area
+		cornwall_area
+		worcestershire_area
+		warwickshire_area
+	}
+}
+
+wales_region = {
+	areas = {
+		denbighshire_area
+		caernarfonshire_area
+		powys_area
+		brecknockshire_area
+		angelsey_area
+		merionethshire
+		cardiganshire_area
+		pembrokeshire_area
+		carmarthenshire_area
+		glamorganshire
+		monmouthshire_area
+	}
+}

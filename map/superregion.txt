@@ -1,0 +1,5 @@
+
+britain_superregion = {
+	england_region
+	wales_region
+}
