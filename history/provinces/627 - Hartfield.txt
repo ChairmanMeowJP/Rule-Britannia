@@ -1,0 +1,30 @@
+#627 - Hartfield
+
+#Core Details
+capital = ""
+
+#Demographics
+culture = 
+religion = 
+
+#Development and Trade
+base_tax = 
+base_production = 
+base_manpower = 
+trade_goods = unknown
+
+#Cores and Occupation
+
+#Other Political
+hre = no
+
+#Forts/Other Buildings
+
+#Special Modifiers
+
+
+
+
+#History:
+
+
