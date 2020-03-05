@@ -1,0 +1,177 @@
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+######################################
+# Counter Revolution
+######################################
+counter_revolution = {
+	potential = {
+		revolution_target_exists = yes
+		is_revolution_target = no
+	}
+
+	trigger = {
+		capital_scope = { continent = europe }
+		revolution_target_exists = yes
+		is_revolution_target = no
+		is_free_or_tributary_trigger = yes
+		NOT = {
+			revolution_target = {
+				war_with = ROOT
+			}
+			revolution_target = {
+				truce_with = ROOT
+			} 
+		}
+		government = monarchy
+	}
+
+	prestige = -5
+	stability_cost_modifier = 0.3
+	global_unrest = 5
+}
+
+
+
+######################################
+# Reaction
+######################################
+reaction = {
+	potential = {
+		revolution_target_exists = yes
+		capital_scope = { continent = europe }
+	}
+
+	trigger = {
+		capital_scope = { continent = europe }
+		revolution_target_exists = yes
+		is_revolution_target = no
+		is_free_or_tributary_trigger = yes
+		government = monarchy
+		revolution_target = {
+			war_with = ROOT
+		}  
+
+	}
+
+	prestige = 10
+	stability_cost_modifier = -0.1
+	global_unrest = -10
+}
+
+######################################
+# Crusader
+######################################
+crusader = {
+	potential = {
+		religion = catholic
+		crusade_target = {
+			exists = yes
+		}
+		
+	}
+
+	trigger = {
+		
+		crusade_target = {
+			war_with = ROOT
+			any_province = {
+				controlled_by = root
+			}
+		}  
+		land_maintenance = 1.0
+	}
+
+	global_manpower_modifier = 0.3
+	global_tax_modifier = 0.1
+	land_morale = 0.10
+	prestige = 1
+	papal_influence = 1
+	devotion = 0.25
+	#icon = 9
+}
+
+######################################
+# Excommunication
+######################################
+excommunication = {
+	potential = {
+		religion = catholic	
+	}
+
+	trigger = {
+		is_excommunicated = yes
+		
+	}
+
+	prestige = -2
+	tolerance_own = -3
+	devotion = -5
+	papal_influence = -10
+	#icon = 10
+}
+
+##################################################
+# HRE modifiers
+##################################################
+hre_dominant_catholic = {
+	potential = {
+		capital_scope = {
+			continent = europe
+		}
+		OR = {
+			religion = catholic
+			religion = protestant
+		}
+	}
+
+	trigger = {
+		religion = catholic
+		hre_religion = catholic
+		hre_religion_locked = yes
+	}
+	
+	legitimacy = 0.25
+	tolerance_own = 1
+	global_missionary_strength = 0.01
+	imperial_authority = 0.25
+}
+
+hre_dominant_protestant = {
+	potential = {
+		capital_scope = {
+			continent = europe
+		}
+		OR = {
+			religion = catholic
+			religion = protestant
+		}
+	}
+
+	trigger = {
+		religion = protestant
+		hre_religion = protestant
+		hre_religion_locked = yes
+	}
+	
+	legitimacy = 0.25
+	tolerance_own = 1
+	global_missionary_strength = 0.01
+	imperial_authority = 0.25
+}
+
+######################################
+# Robot parts
+######################################
+
+synthetic_remnants = {
+	potential = {
+		has_global_flag = synthetics_defeated
+	}
+	trigger = {
+		has_global_flag = synthetics_defeated
+	}
+	technology_cost = -0.25
+}
