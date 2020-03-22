@@ -39,3 +39,9 @@ wales_region = {
 		monmouthshire_area
 	}
 }
+
+scotland_region = {
+}
+
+ireland_region = {
+}
