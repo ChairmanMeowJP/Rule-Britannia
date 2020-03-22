@@ -1,0 +1,58 @@
+empire_of_china_in_name = {
+	potential = {
+		NOT = { has_country_flag = had_empire_of_china_culture_disaster }
+		is_emperor_of_china = yes
+		has_dlc = "Mandate of Heaven"
+	}
+
+	
+	
+	can_start = {
+		has_any_disaster = no
+	}
+	
+	can_stop = { 
+		has_any_disaster = yes
+	}
+	
+	
+	progress = {
+		modifier = {
+			factor = -0.5
+			full_idea_group = humanist_ideas
+		}
+	}
+	
+
+	
+	can_end = {
+		OR = {
+			is_emperor_of_china = no
+			custom_trigger_tooltip = {
+				tooltip = disaster_active_for_10_years_tooltip
+				had_country_flag = { flag = had_empire_of_china_culture_disaster days = 3650 }
+			}
+		}
+	}
+	
+
+	modifier = {
+		imperial_mandate = -0.3
+		years_of_nationalism = 5
+		technology_cost = 0.2
+	}	
+	
+	
+	on_start = empire_of_china_in_name.1
+	on_end = empire_of_china_in_name.2
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			#1000 = 0
+			# None
+		}
+	}
+}
+

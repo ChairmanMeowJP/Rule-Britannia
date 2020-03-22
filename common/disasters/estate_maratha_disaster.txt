@@ -1,0 +1,43 @@
+estate_maratha_disaster = {
+
+	potential = {
+		always = no
+	}
+	
+	can_start = {
+		has_any_disaster = no
+	}
+	
+	can_stop = {
+		has_any_disaster = yes
+	}
+	
+	down_progress = {
+		factor = 1
+	}
+	
+	progress = {	
+		modifier = {
+			factor = 5
+			always = no
+		}		
+	}
+	
+	can_end = {
+		always = yes
+	}
+	
+	on_start = estate_disasters.11
+	
+	on_start_effect = {
+		if = {
+			limit = {
+				has_dlc = "The Cossacks"
+			}
+			custom_tooltip = estate_maratha_disaster_tooltip_cossacks
+		}
+		else = {
+			custom_tooltip = estate_maratha_disaster_tooltip
+		}
+	}
+}

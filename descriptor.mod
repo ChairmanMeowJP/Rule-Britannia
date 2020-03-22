@@ -1,7 +1,9 @@
 name="Britannia Universalis"
 path="mod/britanniauniversalis"
 replace_path="common/province_names"
+replace_path="events"
 replace_path="history/wars"
+replace_path="map/random"
 replace_path="missions"
 tags={
 	"Historical"
