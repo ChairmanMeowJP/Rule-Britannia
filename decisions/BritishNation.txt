@@ -92,7 +92,7 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			british_isles_region = {
+			england_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
@@ -117,26 +117,6 @@ country_decisions = {
 				}
 				1979 = {
 				add_permanent_claim = GBR
-				}
-				iceland_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_claim = GBR
-				}
-			}
-			if = {
-				limit = {
-					mission_completed = eng_rb_spice_islands
-					has_dlc = "Rule Britannia"
-				}
-				west_bengal_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = GBR
 				}
 			}
 			if = {
@@ -250,7 +230,7 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			british_isles_region = {
+			england_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

@@ -11,7 +11,7 @@ religion =
 base_tax = 
 base_production = 
 base_manpower = 
-trade_goods = unknown
+trade_goods = grain
 
 #Cores and Occupation
 

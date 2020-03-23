@@ -1,0 +1,3 @@
+#No China
+#Below is how to set Chinese Emperor. Reuse for Wales maybe? I'm sure we can find a use
+#YYYY.MM.DD = { celestial_emperor = TAG }
