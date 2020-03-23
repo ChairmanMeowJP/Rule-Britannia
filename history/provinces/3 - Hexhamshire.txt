@@ -1,37 +1,34 @@
-# - 
-#Area - 
-#Region - 
+#3 - Hexhamshire
 
 #Core Details
-capital = "BLANK"
+capital = "Blank"
 is_city = yes
 owner = HAR
 controller = HAR
 
 #Demographics
-#culture = 
-#religion = catholic
+culture = english
+religion = catholic
 
 #Development and Trade
-base_tax = 
-base_production = 
-base_manpower = 
-#trade_goods = 
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = grain
 
-#Cores and Occupation (Alphabetical after current)
+#Cores and Occupation
 add_core = HAR
 
 #Other Political
 hre = no
 
-#Fort/Other Buildings
+#Forts/Other Buildings
 
 #Special Modifiers
 
-#Discoveries
-#discovered_by = western
-#discovered_by = muslim
-#discovered_by = ottoman
-#discovered_by = eastern
 
-#Histories
+
+
+#History:
+
+

@@ -10,6 +10,7 @@ replace_path="history/diplomacy"
 replace_path="history/countries"
 replace_path="history/provinces"
 replace_path="decisions"
+replace_path = "customizable_localization"
 tags={
 	"Historical"
 	"Overhaul"

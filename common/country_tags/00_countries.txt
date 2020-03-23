@@ -121,6 +121,6 @@ HAR = "countries/Harold.txt"
 #MNT = "countries/Montgomery.txt"
 #PWS = "countries/Powys.txt"
 
-# ???
+#Random
 JMN = "countries/Jan Mayen.txt"
 SYN = "countries/Synthetics.txt"
