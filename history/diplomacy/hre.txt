@@ -1,3 +1,0 @@
-#No HRE
-#Below is how to set Emperor. Will likely reuse for King of Ireland?
-#YYYY.MM.DD = { emperor = TAG } 
