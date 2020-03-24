@@ -12,6 +12,7 @@ replace_path="history/provinces"
 replace_path="decisions"
 replace_path="customizable_localization"
 replace_path="common/achievements.txt"
+replace_path="common/disasters.txt"
 tags={
 	"Historical"
 	"Overhaul"
