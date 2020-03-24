@@ -1440,11 +1440,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		OR = {
-			religion = catholic
-			religion = orthodox
-			religion_group = muslim
-		}
+		religion = catholic
 	}
 
 	mean_time_to_happen = {
@@ -1484,24 +1480,7 @@ country_event = {
 			}
 		}
 		reduce_estate_church_loyalty_effect = yes
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			add_piety = -0.1
-		}
-		if = {
-			limit = {
-				religion = catholic
-			}
-			add_papal_influence = -10
-		}
-		if = {
-			limit = {
-				religion = orthodox
-			}
-			add_patriarch_authority = -0.1
-		}
+		add_papal_influence = -10
 		add_prestige = 10
 	}
 	option = {
@@ -1514,24 +1493,7 @@ country_event = {
 			}
 		}
 		add_estate_church_loyalty_effect = yes
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			add_piety = 0.2
-		}
-		if = {
-			limit = {
-				religion = catholic
-			}
-			add_papal_influence = 10
-		}
-		if = {
-			limit = {
-				religion = orthodox
-			}
-			add_patriarch_authority = 0.05
-		}
+		add_papal_influence = 10
 		add_prestige = -15
 	}
 	option = {
@@ -1540,24 +1502,7 @@ country_event = {
 		trigger = { ruler_has_personality = zealot_personality }
 		required_personality = zealot_personality
 		add_estate_church_loyalty_effect = yes
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			add_piety = 0.1
-		}
-		if = {
-			limit = {
-				religion = catholic
-			}
-			add_papal_influence = 5
-		}
-		if = {
-			limit = {
-				religion = orthodox
-			}
-			add_patriarch_authority = 0.025
-		}
+		add_papal_influence = 5
 	}
 	option = {
 		name = "personality_options.5050.b"		# Attempt to lessen the impact
@@ -2108,7 +2053,6 @@ country_event = {
 			OR = {
 				has_government_attribute = is_merchant_republic
 				government = theocracy
-				has_reform = tribal_federation
 			}
 		}
 	}
@@ -2802,7 +2746,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = {mercantilism = 50 }
+		NOT = { mercantilism = 50 }
 		NOT = { has_country_modifier = trade_income_increase }
 	}
 
@@ -3473,22 +3417,6 @@ country_event = {
 
 	is_triggered_only = yes
 
-	trigger = {
-		capital_scope = { continent = europe }
-		any_known_country = {
-			culture_group = latin
-		}
-	}
-	
-	immediate = {
-		hidden_effect = {
-			random_known_country = {
-				limit = { culture_group = latin }
-				save_event_target_as = italian_engineer_country
-			}
-		}
-	}
-
 	mean_time_to_happen = {
 		days = 1
 		
@@ -3514,8 +3442,8 @@ country_event = {
 		add_mil_power = 40
 		define_advisor = {
 			type = fortification_expert
-			culture = event_target:italian_engineer_country
-			religion = event_target:italian_engineer_country
+			culture = lombard
+			religion = catholic
 			skill = 2
 			discount = yes
 		}
@@ -3536,8 +3464,8 @@ country_event = {
 		add_mil_power = 40
 		define_advisor = {
 			type = fortification_expert
-			culture = event_target:italian_engineer_country
-			religion = event_target:italian_engineer_country
+			culture = lombard
+			religion = catholic
 			skill = 2
 			discount = yes
 		}
@@ -3555,22 +3483,6 @@ country_event = {
 	picture = ADVISOR_eventPicture
 
 	is_triggered_only = yes
-
-	trigger = {
-		capital_scope = { continent = europe }
-		any_known_country = {
-			primary_culture = dutch
-		}
-	}
-
-	immediate = {
-		hidden_effect = {
-			random_known_country = {
-				limit = { primary_culture = dutch }
-				save_event_target_as = drill_instructor_country
-			}
-		}
-	}
 
 	mean_time_to_happen = {
 		days = 1
@@ -3598,8 +3510,8 @@ country_event = {
 		add_years_of_income = -0.25
 		define_advisor = {
 			type = army_reformer
-			culture = event_target:drill_instructor_country
-			religion = event_target:drill_instructor_country
+			culture = dutch
+			religion = catholic
 			skill = 2
 			discount = yes
 		}
@@ -3621,8 +3533,8 @@ country_event = {
 		add_years_of_income = -0.15
 		define_advisor = {
 			type = army_reformer
-			culture = event_target:drill_instructor_country
-			religion = event_target:drill_instructor_country
+			culture = dutch
+			religion = catholic
 			skill = 2
 			discount = yes
 		}
@@ -3915,9 +3827,6 @@ country_event = {
 
 	is_triggered_only = yes
 
-	trigger = {
-		religion_group = christian
-	}
 	mean_time_to_happen = {
 		days = 1
 		
@@ -4814,7 +4723,6 @@ country_event = {
 
 	trigger = {
 		religion = catholic
-		NOT = { has_reform = papacy_reform }
 	}
 
 	mean_time_to_happen = {
@@ -4855,109 +4763,6 @@ country_event = {
 
 
 #########################################################
-#	City-state wants independence back					#
-#########################################################
-
-# Genoa
-country_event = {
-	id = 6005
-	title = "EVTNAME6005"
-	desc = "EVTDESC6005"
-	picture = ANGRY_MOB_eventPicture
-
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { exists = GEN }
-		owns = 101
-		is_year = 1700
-	}
-
-	mean_time_to_happen = {
-		days = 1
-		
-		modifier = {
-			factor = 2.0
-			NOT = { stability = 0 }
-		}
-		modifier = {
-			factor = 0.5
-			luck = yes
-		}
-		modifier = {
-			factor = 0.66
-			stability = 3 
-		}
-	}
-
-	option = {
-		name = "EVTOPTA6005"		# Nah...
-		ai_chance = { factor = 60 }
-		101 = {
-			nationalist_rebels = 1
-		}
-	}
-	option = {
-		name = "EVTOPTB6005"		# We'll consider it
-		ai_chance = { factor = 40 }
-		GEN = {
-			add_core = 101
-		}
-		remove_core = 101
-	}
-}
-
-# Venice
-country_event = {
-	id = 6006
-	title = "EVTNAME6006"
-	desc = "EVTDESC6006"
-	picture = ANGRY_MOB_eventPicture
-
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { exists = VEN }
-		is_year = 1700
-		owns = 112
-	}
-
-	mean_time_to_happen = {
-		days = 1
-		
-		modifier = {
-			factor = 2.0
-			NOT = { stability = 0 }
-		}
-		modifier = {
-			factor = 0.5
-			luck = yes
-		}
-		modifier = {
-			factor = 0.66
-			stability = 3
-		}
-	}
-
-	option = {
-		name = "EVTOPTA6006"		# Nah...
-		ai_chance = { factor = 70 }
-		112 = {
-			nationalist_rebels = 1
-		}
-	}
-	option = {
-		name = "EVTOPTB6006"		# We'll consider it
-		ai_chance = { factor = 30 }
-		VEN = {
-			add_core = 112
-		}
-		remove_core = 112
-	}
-}
-
-
-#########################################################
 #		Exceptional Court Painter						#
 #########################################################
 
@@ -4971,7 +4776,6 @@ country_event = {
 
 	trigger = {
 		NOT = { overextension_percentage = 0.01 }
-		capital_scope = { continent = europe }
 		is_at_war = no
 	}
 
@@ -8759,53 +8563,6 @@ country_event = {
 	}
 }
 
-# Merchant Expedition
-country_event = {
-	id = 881
-	title = "EVTNAME881"
-	desc = "EVTDESC881"
-	picture = EXPLORERS_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		has_idea = quest_for_the_new_world
-		num_of_ports = 1
-		num_of_merchants = 2
-		any_active_trade_node = {
-			is_sea = yes
-		}
-		capital_scope = { continent = europe }
-		carribeans_region = {
-			NOT = { has_discovered = ROOT }
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = "EVTOPTA881"
-		random_owned_province = {
-			limit = { has_port = yes }
-			heavy_ship = ROOT
-		}
-		create_explorer = 20
-	}
-	option = {
-		name = "personality_options.881.a"
-		highlight = yes
-		trigger = { ruler_has_personality = navigator_personality }
-		required_personality = navigator_personality
-		random_owned_province = {
-			limit = { has_port = yes }
-			heavy_ship = ROOT
-		}
-		create_explorer = 50
-	}
-}
-
 #Renaissance Prince
 country_event = {
 	id = 883
@@ -8883,112 +8640,6 @@ country_event = {
 				which = renaissance
 				value = 50
 			}
-		}
-	}
-}
-
-# Expanding influence
-country_event = {
-	id = 882
-	title = "EVTNAME882"
-	desc = "EVTDESC882"
-	picture = SHIP_SAILING_eventPicture
-
-	is_triggered_only = yes
-	
-	trigger = {
-		OR = {
-			has_country_modifier = dutch_india_trade_co 
-			has_country_flag = trade_company 
-		}
-		OR = {
-			bengal_region = {
-				owned_by = ROOT
-			}
-			coromandel_region = {
-				owned_by = ROOT
-			}
-			west_india_region = {
-				owned_by = ROOT
-			}
-		}
-		OR = {
-			bengal_region = {
-				NOT = {
-					is_core = ROOT
-					owned_by = ROOT
-					owner = {
-						has_country_modifier = dutch_india_trade_co 
-						has_country_flag = trade_company 
-					} 
-				}
-				any_neighbor_province = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
-			}
-			coromandel_region = {
-				NOT = {
-					is_core = ROOT
-					owned_by = ROOT
-					owner = {
-						has_country_modifier = dutch_india_trade_co 
-						has_country_flag = trade_company 
-					} 
-				}
-				any_neighbor_province = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
-			}
-			west_india_region = {
-				NOT = {
-					is_core = ROOT
-					owned_by = ROOT
-					owner = {
-						has_country_modifier = dutch_india_trade_co 
-						has_country_flag = trade_company 
-					} 
-				}
-				any_neighbor_province = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = "EVTOPTA882"
-		add_dip_power = -20
-	}
-	option = {
-		name = "EVTOPTB882"
-		random_province = {
-			limit = {
-				OR = {
-					region = bengal_region
-					region = west_india_region
-					region = coromandel_region
-				}
-				NOT ={
-					is_core = ROOT
-					owned_by = ROOT
-					owner = {
-						has_country_modifier = dutch_india_trade_co 
-						has_country_flag = trade_company 
-					} 
-				}
-				any_neighbor_province = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
-			}
-			add_claim = ROOT
 		}
 	}
 }
@@ -10342,123 +9993,6 @@ country_event = {
 	}
 }
 
-# The White Elephant
-country_event = {
-	id = random_event.12
-	title = "random_event.EVTNAME12"
-	desc = "random_event.EVTDESC12"
-	picture = COURT_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		OR = {
-			culture_group = southeastasian_group
-			culture_group = burman
-			culture_group = eastern_aryan
-			culture_group = hindusthani
-			culture_group = western_aryan
-			culture_group = dravidian
-			culture_group = central_indic
-		}
-		NOT = { primary_culture = tibetan }
-		NOT = {
-			stability = 3
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = "random_event.EVTOPTA12"
-		add_stability_or_adm_power = yes
-	}
-}
-
-# Profits in Mecca!
-country_event = {
-	id = random_event.13
-	title = "random_event.EVTNAME13"
-	desc = "random_event.EVTDESC13"
-	picture = MERCHANTS_TALKING_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		owns = 385 # Mecca
-		NOT = {
-			has_country_modifier = mecca_timer
-		}
-		NOT = {
-			has_ruler_modifier = pious_ruler
-		}
-		has_regency = no
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			add_country_modifier = {
-				name = mecca_timer
-				duration = 1825
-				hidden = yes
-			}
-		}
-	}
-	
-	option = {
-		name = "random_event.EVTOPTA13"
-		ai_chance = {
-			factor = 33
-		}
-		add_treasury = 100
-		add_mercantilism = 2
-	}
-	option = {
-		name = "random_event.EVTOPTB13"
-		ai_chance = {
-			factor = 33
-			modifier = {
-				factor = 2
-				has_estate = estate_burghers
-				NOT = {
-					estate_loyalty = {
-						estate = estate_burghers
-						loyalty = 40
-					}
-				}
-			}
-		}
-		add_mercantilism = 5
-		add_estate_burghers_loyalty_effect = yes
-	}
-	option = {
-		name = "random_event.EVTOPTC13"
-		ai_chance = {
-			factor = 33
-			modifier = {
-				factor = 2
-				has_estate = estate_church
-				NOT = {
-					estate_loyalty = {
-						estate = estate_church
-						loyalty = 40
-					}
-				}
-			}
-		}
-		add_ruler_modifier = {
-			name = pious_ruler
-		}
-		add_estate_church_loyalty_effect = yes
-	}
-}
-
 # An astonishing performance
 country_event = {
 	id = random_event.14
@@ -10702,50 +10236,6 @@ province_event = {
 	}
 }
 
-# Establish Penal Colony in COLONYNAME
-province_event = {
-	id = random_event.22
-	title = "random_event.EVTNAME22"
-	desc = "random_event.EVTDESC22"
-	picture = COLONIZATION_eventPicture
-	
-	trigger = {
-		owner = {
-			NOT = { has_country_flag = has_penal_colony }
-		}
-		is_colony = yes
-		NOT = { colonysize = 500 }
-	}
-	
-	mean_time_to_happen = {
-		months = 2000
-		modifier = {
-			factor = 0.9
-			region = australia_region
-		}
-	}
-	
-	immediate = {
-		owner = {
-			set_country_flag = has_penal_colony
-		}
-	}
-
-	option = {
-		name = "random_event.EVTOPTA22" # Sounds good, set it up
-		add_province_modifier = {
-			name = "penal_colony"
-			duration = 9125
-		}
-	}
-	option = {
-		name = "random_event.EVTOPTB22" # We can't trust these people! Keep them in prison over here
-		owner = {
-			add_adm_power = -10
-		}
-	}
-}
-
 # Influenza!
 province_event = {
 	id = random_event.23
@@ -10959,13 +10449,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 2000
-		modifier = {
-			factor = 0.9
-			OR = {
-				primary_culture = dutch
-				culture_group = french
-			}
-		}
 	}
 	
 	immediate = {
@@ -11443,38 +10926,6 @@ country_event = {
 	}
 }
 
-# Storms
-country_event = {
-	id = 6433
-	title = "EVTNAME6433N"
-	desc = "EVTDESC6433N"
-	picture = TRADEGOODS_eventPicture
-
-	trigger = {
-		chinaware = 1
-	}
-
-	is_triggered_only = yes
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = "EVTOPTA6433N"
-		random_owned_province = {
-			limit = {
-				trade_goods = chinaware
-			}
-			add_province_modifier = {
-				name = "storms"
-				duration = 730
-			}			
-		}
-	}
-}
-
-
 # Harvest failure
 country_event = {
 	id = 6434
@@ -11510,10 +10961,6 @@ country_event = {
 		}		
 	}
 }
-
-
-
-
 
 
 # Benign Neglect
