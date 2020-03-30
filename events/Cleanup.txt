@@ -12,8 +12,6 @@ country_event = {
 	picture = REFORM_eventPicture
 	
 	trigger = {
-		exists = PAP
-		NOT = { has_opinion = { who = PAP value = 0 } }
 		religion = catholic
 		has_regency = no
 		government = monarchy

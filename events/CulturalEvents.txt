@@ -47,7 +47,7 @@ country_event = {
 	}
 }
 
-# Liberté, Egalité, Fraternité
+# LibertÃ©, EgalitÃ©, FraternitÃ©
 country_event = {
 	id = cultural_event.2
 	title = cultural_event.2.t
@@ -319,95 +319,6 @@ country_event = {
 	option = {
 		name = cultural_event.4.b
 		add_prestige = -5
-	}
-}
-
-# Diwani Script
-country_event = {
-	id = cultural_event.8
-	title = cultural_event.8.t
-	desc = cultural_event.8.d
-	picture = INVENTION_eventPicture
-
-	trigger = {
-		religion = sunni
-		government = monarchy
-		NOT = {
-			has_country_flag = diwani_script
-		}
-		adm_power = 30
-		artist = 2
-	}
-	
-	mean_time_to_happen = {
-		months = 180
-	}
-	
-	immediate = {
-		set_country_flag = diwani_script
-	}
-	
-	option = {
-		name = cultural_event.8.a
-		add_country_modifier = {
-			name = "diwani_script"
-			duration = -1
-		}
-		add_adm_power = -30
-	}
-	option = {
-		name = cultural_event.8.b
-		add_prestige = -5
-	}
-}
-
-# The Way of Tea
-country_event = {
-	id = cultural_event.9
-	title = cultural_event.9.t
-	desc = cultural_event.9.d
-	picture = TRADEGOODS_eventPicture
-
-	trigger = {
-		religion = shinto
-		NOT = {
-			has_country_modifier = way_of_tea
-		}
-		NOT = {
-			any_country = {
-				capital_scope = { has_province_modifier = controls_tea_trade }
-			}
-		}
-		trading_part = {
-			trade_goods = tea
-			value = 0.1
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 180
-	}
-	
-	option = {
-		name = cultural_event.8.a
-		every_country = {
-			limit = { has_country_modifier = way_of_tea }
-			remove_country_modifier = way_of_tea
-		}
-		add_country_modifier = {
-			name = "way_of_tea"
-			duration = -1
-		}
-		capital_scope = {
-			add_province_modifier = {
-				name = "controls_tea_trade"
-				duration = 365
-			}			
-		}
-	}
-	option = {
-		name = cultural_event.8.b
-		add_prestige = -10
 	}
 }
 
