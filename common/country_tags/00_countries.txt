@@ -103,23 +103,27 @@ HAR = "countries/Harold.txt"
 
 #Wales
 #WAL = "countries/Wales.txt"
-#Flintshire
-#FLI = "countries/Flint.txt"
-#HPD = "countries/Hopedale.txt"
-#HWD = "countries/Hawarden.txt"
-#MLD = "countries/Mold.txt"
-#MSS = "countries/Maelor_Saesneg.txt"
-#Denbighshire
 #BAY = "countries/Bromfield_and_Yale.txt"
-#CRK = "countries/Chirk.txt"
-#DNB = "countries/Denbigh.txt"
-#RTN = "countries/Ruthin.txt"
-#Montgomeryshire
 #CAU = "countries/Caus.txt"
 #CDW = "countries/Cedewain.txt"
 #CRI = "countries/Ceri.txt"
+#CRK = "countries/Chirk.txt"
+#CWW = "countries/Cwmwd_Deuddwr.txt"
+#DNB = "countries/Denbigh.txt"
+#ELF = "countries/Elfael.txt"
+#FLI = "countries/Flint.txt"
+#GLB = "countries/Glasbury.txt"
+#GWR = "countries/Gwrtheyrnion.txt"
+#HPD = "countries/Hopedale.txt"
+#HWD = "countries/Hawarden.txt"
+#MAE = "countries/Maelienydd.txt"
+#MLD = "countries/Mold.txt"
 #MNT = "countries/Montgomery.txt"
+#MSS = "countries/Maelor_Saesneg.txt"
+#PRS = "countries/Presteigne.txt"
 #PWS = "countries/Powys.txt"
+#RAD = "countries/Radnor.txt"
+#RTN = "countries/Ruthin.txt"
 
 #Random
 JMN = "countries/Jan Mayen.txt"
