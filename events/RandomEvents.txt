@@ -763,73 +763,6 @@ country_event = {
 }
 
 #########################################################
-#		Rush of colonists								#
-#########################################################
-country_event = {
-	id = 5022
-	title = "EVTNAME5022"
-	desc = "EVTDESC5022"
-	picture = COLONIZATION_eventPicture
-	
-	is_triggered_only = yes
-
-	trigger = {
-		has_idea = quest_for_the_new_world
-		num_of_ports = 1
-		NOT =  { has_country_modifier = monetary_benefits }
-		colony = 1
-	}
-
-	mean_time_to_happen = {
-		days = 1
-		
-		modifier = {
-			factor = 2.0
-			has_idea = colonial_ventures
-		}
-		modifier = {
-			factor = 2.0
-			luck = yes
-		}
-		modifier = {
-			factor = 0.66
-			offensive_ideas = 5
-		}
-	}
-
-	option = {
-		name = "EVTOPTA5022"		# Gain extra colonists
-		ai_chance = { factor = 45 }	
-		add_country_modifier = {
-			name = "colonial_enthusiasm"
-			duration = 1825
-		}
-	}
-	option = {
-		name = "EVTOPTB5022"		# Receive monetary benefits
-		ai_chance = { factor = 55 }
-		add_country_modifier = {
-			name = "monetary_benefits"
-			duration = 1825
-		}
-	}
-	option = {
-		name = "personality_options.5022.c"		# Gain more extra colonists
-		highlight = yes
-		trigger = {
-			ruler_has_personality = expansionist_personality
-			NOT = { has_country_modifier = colonial_enthusiasm }
-		}
-		required_personality = expansionist_personality
-		ai_chance = { factor = 100 }
-		add_country_modifier = {
-			name = "colonial_enthusiasm"
-			duration = 3650
-		}
-	}
-}
-
-#########################################################
 #		Rush of merchants								#
 #########################################################
 country_event = {
@@ -1840,7 +1773,6 @@ country_event = {
 			}
 		}
 		add_republican_tradition = -10
-		add_horde_unity = -25
 		add_legitimacy = -25
 		reduce_mandate_large_effect = yes
 	}
@@ -1851,8 +1783,6 @@ country_event = {
 		required_personality = righteous_personality
 		add_legitimacy = -10
 		add_republican_tradition = -5
-		add_horde_unity = -10
-		reduce_mandate_effect = yes
 	}
 	option = {
 		name = "personality_options.5054.b"		# 
@@ -1865,9 +1795,7 @@ country_event = {
 			}
 			50 = {
 				add_republican_tradition = -10
-				add_horde_unity = -25
 				add_legitimacy = -25
-				reduce_mandate_large_effect = yes
 			}
 		}
 	}
@@ -2298,20 +2226,6 @@ country_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTF5060"		# Sacrifice a human heart to appease the comet!
-		trigger = {
-			religion_group = pagan
-		}
-		if = {
-			limit = { NOT = { stability = -2 } }
-			add_adm_power = -100
-		}		
-		if = {
-			limit = { stability = -2 }
-			add_stability = -1
-		}
-	}
-	option = {
 		name = "EVTOPTG5060"		# If only we had comet sense!
 		if = {
 			limit = { NOT = { stability = -2 } }
@@ -2553,8 +2467,6 @@ country_event = {
 		trigger = { ruler_has_personality = cruel_personality }
 		required_personality = cruel_personality
 		add_legitimacy = 5
-		add_horde_unity = 5
-		add_mandate_effect = yes
 		add_estate_nobles_loyalty_effect = yes
 	}
 	option = {
@@ -2948,10 +2860,8 @@ country_event = {
 			add_opinion = { who = ROOT modifier = opinion_granted_privileges }
 		}
 		add_legitimacy = -10
-		add_horde_unity = -10
 		add_republican_tradition = -5
 		add_devotion = -5
-		reduce_mandate_effect = yes
 		add_country_modifier = {
 			name = "tax_income_boost"
 			duration = 7300
@@ -8272,7 +8182,6 @@ country_event = {
 		is_at_war = yes
 		war_exhaustion = 5
 		government = monarchy
-		NOT = { has_reform = celestial_empire }
 		is_lesser_in_union = no
 		NOT = { legitimacy_or_horde_unity = 80 }
 		any_owned_province = {
@@ -9573,7 +9482,6 @@ country_event = {
 	}
 	option = {
 		name = "random_event.EVTOPTB5"
-		trigger = { NOT = { has_reform = celestial_empire } }
 		ai_chance = {
 			factor = 33
 			modifier = {
@@ -9584,7 +9492,6 @@ country_event = {
 		add_years_of_income = -0.10
 		add_prestige = 5
 		add_legitimacy = 5
-		add_horde_unity = 5
 	}
 	option = {
 		name = "random_event.EVTOPTC5"

@@ -645,7 +645,6 @@ country_event = {
 		add_absolutism = -5
 		add_legitimacy = -10
 		add_devotion = -10
-		add_horde_unity = -10
 		add_republican_tradition = -5
 		event_target:quarrelsome_nobles_province = {
 			add_local_autonomy = 40
@@ -747,7 +746,6 @@ country_event = {
 		add_legitimacy = 10
 		add_devotion = 10
 		add_republican_tradition = 5
-		add_horde_unity = 10
 		add_prestige = 10
 	}
 }
