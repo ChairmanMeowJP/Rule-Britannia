@@ -1,0 +1,86 @@
+#just replace all [insert province id here] and delete this once that is done
+
+country_decisions = {
+
+	welsh_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_wales_flag }
+			primary_culture = welsh
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = WAL }
+			NOT = { tag = ENG }
+			NOT = { tag = DEN }
+			NOT = { tag = IRE }
+			NOT = { tag = SCO }
+			NOT = { tag = ALB }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 124 #Caergybi/Holyhead
+				province_id = 203 #Caerdydd/Cardiff
+				province_id = 185 #Abertawe/Swansea
+				province_id = 102 #Y Trallwng/Welshpool
+				province_id = 135 #Caernarvon/Caernarfon
+				province_id = 177 #Caerfyrddin/Carmarthen
+				province_id = 171 #Penfro/Pembroke
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}	
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = WAL }
+		   	owns_core_province = 124 #Caergybi/Holyhead
+			owns_core_province = 203 #Caerdydd/Cardiff
+			owns_core_province = 185 #Abertawe/Swansea
+			owns_core_province = 102 #Y Trallwng/Welshpool
+			owns_core_province = 135 #Caernarvon/Caernarfon
+			owns_core_province = 177 #Caerfyrddin/Carmarthen
+			owns_core_province = 171 #Penfro/Pembroke
+
+
+		}	
+		effect = {
+			[insert province id here] = { #Cardiff/Caerdydd
+				move_capital_effect = yes
+				change_province_name = "Caerdydd"
+				rename_capital = "Caerdydd"
+				[insert province id here] = {	
+					if = {
+						limit = {
+							province_has_center_of_trade_of_level = 1
+							NOT = {
+								province_has_center_of_trade_of_level = 2
+							}						
+						}
+						add_center_of_trade_level = 1
+					}
+				}
+			}	
+			set_country_flag = formed_wales_flag
+			change_tag = WAL
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_prestige = 15
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 3650
+			}
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+		}
+		ai_will_do = {
+			factor = 400
+		}
+		ai_importance = 400
+	}
+}
