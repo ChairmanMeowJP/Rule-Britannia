@@ -1,7 +1,7 @@
 width = 5632
 height = 2048
 
-max_provinces = 1668 
+max_provinces = 4790 #TODO: lower this to 1668. This is too high for now to prevent crashes.
 
 sea_starts = { 1652 }
 lakes = {
@@ -20,8 +20,8 @@ only_used_for_random = {
 
 force_coastal = {
 }
-		
-definitions = "definitions.csv"
+
+definitions = "definition.csv"
 provinces = "provinces.bmp"
 positions = "positions.txt"
 terrain = "terrain.bmp"
