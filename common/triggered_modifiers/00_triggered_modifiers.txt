@@ -9,13 +9,18 @@
 counter_revolution = {
 	potential = {
 		revolution_target_exists = yes
-		is_revolution_target = no
+		is_revolutionary = no
+		any_country = {
+			is_revolution_target = yes
+			capital_scope = {
+				continent = ROOT
+			}
+		}
 	}
 
 	trigger = {
-		capital_scope = { continent = europe }
 		revolution_target_exists = yes
-		is_revolution_target = no
+		is_revolutionary = no
 		is_free_or_tributary_trigger = yes
 		NOT = {
 			revolution_target = {
@@ -41,13 +46,18 @@ counter_revolution = {
 reaction = {
 	potential = {
 		revolution_target_exists = yes
-		capital_scope = { continent = europe }
+		is_revolutionary = no
+		any_country = {
+			is_revolution_target = yes
+			capital_scope = {
+				continent = ROOT
+			}
+		}
 	}
 
 	trigger = {
-		capital_scope = { continent = europe }
 		revolution_target_exists = yes
-		is_revolution_target = no
+		is_revolutionary = no
 		is_free_or_tributary_trigger = yes
 		government = monarchy
 		revolution_target = {
