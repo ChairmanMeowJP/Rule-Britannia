@@ -1,5 +1,5 @@
+version="0.1"
 name="Britannia Universalis"
-path="mod/britanniauniversalis"
 replace_path="common/province_names"
 replace_path="events"
 replace_path="map/random"
