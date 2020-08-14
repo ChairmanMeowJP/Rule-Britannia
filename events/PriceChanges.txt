@@ -194,10 +194,8 @@ country_event = {
 
 	trigger = {
 		is_great_power = yes
-		capital_scope = { continent = europe }
 		any_owned_province = {
 			trade_goods = wool
-			continent = europe
 		} 
 		NOT = { has_country_flag = cotton_imports }
 		NOT = { has_global_flag = cotton_imports_global }
@@ -673,7 +671,6 @@ country_event = {
 	major = yes
 
 	trigger = {
-		capital_scope = { continent = europe }
 		NOT = { has_global_flag = depleted_beaver_happened }
 		is_year = 1570
 	}
@@ -932,7 +929,6 @@ country_event = {
 	major = yes
 
 	trigger = {
-		capital_scope = { continent = europe }
 		dip_tech = 18
 		OR = {
 			current_age = age_of_absolutism #Not before this

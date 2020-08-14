@@ -2330,40 +2330,10 @@ province_event = {
 	option = {
 		name = protestantism_events.36.b #Convince the Reformed party to move to other lands.
 		change_religion = protestant
-		owner = {
-			random_owned_province = {
-				limit = {
-					OR = {
-						continent = north_america
-						continent = south_america
-					}
-					has_empty_adjacent_province = yes
-				}
-				random_empty_neighbor_province = {
-					create_colony = 300
-					change_religion = reformed
-				}
-			}
-		}
 	}
 	option = {
 		name = protestantism_events.36.c #Convince the Protestant party to move to other lands.
 		change_religion = reformed
-		owner = {
-			random_owned_province = {
-				limit = {
-					OR = {
-						continent = north_america
-						continent = south_america
-					}
-					has_empty_adjacent_province = yes
-				}
-				random_empty_neighbor_province = {
-					create_colony = 300
-					change_religion = protestant
-				}
-			}
-		}
 	}
 }
 

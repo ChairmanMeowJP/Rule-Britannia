@@ -102,8 +102,6 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = SWE
-			tag = NOR
 			tag = ENG
 			tag = GBR
 		}
@@ -426,8 +424,6 @@ country_event = {
 		OR = {
 			tag = ENG
 			tag = GBR
-			tag = CAS
-			tag = ARA
 		}
 		is_year = 1485
 		NOT = {

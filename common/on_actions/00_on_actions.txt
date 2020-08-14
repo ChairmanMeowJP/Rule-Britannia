@@ -10,17 +10,9 @@ on_religion_change = {
 	if = {
 		limit = {
 			has_reform = feudal_theocracy
-			has_dlc = "Dharma"
 		}
 		remove_government_reform = feudal_theocracy
 	}
-	else_if = {
-		limit = {
-			has_reform = feudal_theocracy
-		}
-		set_legacy_government = despotic_monarchy
-	}
-
 	if = {
 		limit = {
 			has_heir = yes
@@ -194,9 +186,6 @@ on_siege_lost_country = {
 # province
 # root = location, from = losing country
 on_siege_won_province = {
-	events = {
-		synthetic_dawn.4
-	}
 }
 
 # province
@@ -655,22 +644,23 @@ on_mandate_of_heaven_lost = {
 }
 
 on_dismantle_revolution = {
+	events = {
+		center_of_revolution.1500
+	}
 	if = {
 		limit = {
-			has_dlc = "Dharma"
+			any_country = {
+				has_country_flag = last_revolutionary_country
+			}
 		}
-		remove_government_reform = revolutionary_empire_reform
-		change_government = monarchy
+		every_country = {
+			limit = {
+				has_country_flag = last_revolutionary_country
+			}
+			clr_country_flag = last_revolutionary_country
+		}
 	}
-	else = {
-		set_legacy_government = despotic_monarchy
-	}
-	kill_ruler = yes
-	set_revolution_target = ---
-	if = {
-		limit = { has_heir = yes }
-		kill_heir = yes
-	}
+	set_country_flag = last_revolutionary_country
 }
 
 # province

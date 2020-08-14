@@ -103,7 +103,6 @@ HAR = "countries/Harold.txt"
 
 #Wales
 #WAL = "countries/Wales.txt"
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
 #ABG = "countries/Abergavenny.txt"
 #BAY = "countries/Bromfield_and_Yale.txt"
 #BCS = "countries/Bishops_Castle.txt"

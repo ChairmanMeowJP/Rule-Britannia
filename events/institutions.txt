@@ -21,23 +21,7 @@ country_event = {
 	id = institution_events.2
 	title = institution_events.2.t
 	desc = institution_events.2.d
-	
-	picture = {
-		trigger = {
-			OR = {
-				NOT = { has_dlc = "Cradle of Civilization" }
-				NOT = { religion_group = muslim }
-			}
-		}
-		picture = PAINTER_ARTIST_eventPicture
-	}
-	picture = {
-		trigger = {
-			has_dlc = "Cradle of Civilization"
-			religion_group = muslim
-		}
-		picture = MUSLIM_SCHOLAR_WRITING_eventPicture
-	}
+	picture = PAINTER_ARTIST_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -95,22 +79,7 @@ country_event = {
 	id = institution_events.200
 	title = institution_events.2.t
 	desc = institution_events.200.d
-	picture = {
-		trigger = {
-			OR = {
-				NOT = { has_dlc = "Cradle of Civilization" }
-				NOT = { religion_group = muslim }
-			}
-		}
-		picture = PAINTER_ARTIST_eventPicture
-	}
-	picture = {
-		trigger = {
-			has_dlc = "Cradle of Civilization"
-			religion_group = muslim
-		}
-		picture = MUSLIM_SCHOLAR_WRITING_eventPicture
-	}
+	picture = PAINTER_ARTIST_eventPicture
 
 	is_triggered_only = yes
 	
@@ -134,22 +103,7 @@ country_event = {
 	id = institution_events.201
 	title = institution_events.2.t
 	desc = institution_events.201.d
-	picture = {
-		trigger = {
-			OR = {
-				NOT = { has_dlc = "Cradle of Civilization" }
-				NOT = { religion_group = muslim }
-			}
-		}
-		picture = PAINTER_ARTIST_eventPicture
-	}
-	picture = {
-		trigger = {
-			has_dlc = "Cradle of Civilization"
-			religion_group = muslim
-		}
-		picture = MUSLIM_SCHOLAR_WRITING_eventPicture
-	}
+	picture = PAINTER_ARTIST_eventPicture
 
 	is_triggered_only = yes
 	
@@ -175,19 +129,7 @@ country_event = {
 	id = institution_events.3
 	title = institution_events.3.t
 	picture = EXPLORERS_eventPicture
-
-	desc = {
-		trigger = {
-			capital_scope = { NOT = { continent = asia } }
-		}
-		desc = institution_events.3.d
-	}
-	desc = {
-		trigger = {
-			capital_scope = { continent = asia }
-		}
-		desc = institution_events.3.da
-	}
+	desc = institution_events.3.d
 	
 	is_triggered_only = yes
 
@@ -338,72 +280,7 @@ country_event = {
 		}
 		hidden_effect = {
 			every_country = {
-				limit = {
-					OR = {
-						AND = {
-							ai = no
-							knows_country = ROOT
-						}
-						owns_core_province = 112 #Venice
-						owns_core_province = 118 #Rome
-						owns_core_province = 183 #Paris
-						owns_core_province = 1868 #Augsburg
-					}
-					NOT = { tag = ROOT }
-				}
 				country_event = { id = institution_events.400 }
-			}
-			every_country = {
-				limit = {
-					ai = no
-					NOT = { tag = ROOT }
-					NOT = { knows_country = ROOT }
-				}
-				country_event = { id = institution_events.401 }
-			}
-		}
-		if = {
-			limit = {
-				owns_core_province = 112 #Aldine Press/Venetian Printing Industry
-			}
-			112 = {
-				add_institution_embracement = {
-					which = "printing_press"
-					value = 25
-				}
-			}
-		}
-		if = {
-			limit = {
-				owns_core_province = 183 #Parisian Printing Industry
-			}
-			183 = {
-				add_institution_embracement = {
-					which = "printing_press"
-					value = 25
-				}
-			}
-		}
-		if = {
-			limit = {
-				owns_core_province = 1868 #Augsburg Printers
-			}
-			1868 = {
-				add_institution_embracement = {
-					which = "printing_press"
-					value = 25
-				}
-			}
-		}
-		if = {
-			limit = {
-				owns_core_province = 118 #Roman Printers
-			}
-			118 = {
-				add_institution_embracement = {
-					which = "printing_press"
-					value = 25
-				}
 			}
 		}
 	}
@@ -917,15 +794,6 @@ country_event = {
 				type = noble_rebels
 			}
 		}
-		if = {
-			limit = {
-				has_estate = estate_nomadic_tribes
-			}
-			add_estate_loyalty = {
-				estate = estate_nomadic_tribes
-				loyalty = -10
-			}
-		}
 	}
 	option = {
 		name = institution_events.8.b
@@ -995,26 +863,15 @@ country_event = {
 			}
 			add_base_manpower = -1
 			
-			if = {
-				limit = {
-					has_estate = estate_nomadic_tribes
-				}
-				remove_estate = estate_nomadic_tribes
-				owner = {
-					add_estate_loyalty = {
-						estate = estate_nomadic_tribes
-						loyalty = -10
-					}
-				}
-			}
-			if = {
-				limit = {
-					owner = {
+			owner = {
+				if = {
+					limit = {
 						has_estate = estate_burghers
 					}
-					NOT = { has_estate = estate_burghers }
+					scaled_estate_land_share_add_effect = {
+						estate = estate_burghers
+					}
 				}
-				set_estate = estate_burghers
 			}
 		}
 	}
@@ -1237,28 +1094,7 @@ country_event = {
 		picture = GLOBAL_TRADE_eventPicture
 	}
 	
-	desc = {
-		trigger = {
-			capital_scope = {
-				NOT = { continent = new_world }
-				NOT = { continent = north_america }
-				NOT = { continent = south_america }
-			}
-		}
-		desc = institution_events.20.da
-	}
-	desc = {
-		trigger = {
-			capital_scope = {
-				OR = {
-					continent = new_world
-					continent = north_america
-					continent = south_america
-				}
-			}
-		}
-		desc = institution_events.20.db
-	}
+	desc = institution_events.20.da
 	
 	trigger = {
 		is_institution_enabled = new_world_i
@@ -1274,18 +1110,6 @@ country_event = {
 		NOT = {
 			any_owned_province = {
 				new_world_i = 100
-			}
-		}
-		any_owned_province = {
-			NOT = { continent = new_world }
-			NOT = { continent = north_america }
-			NOT = { continent = south_america }
-		}
-		any_owned_province = {
-			OR = {
-				continent = new_world
-				continent = north_america
-				continent = south_america
 			}
 		}
 	}
@@ -1304,55 +1128,21 @@ country_event = {
 	option = {
 		name = institution_events.20.a #
 		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0
-				NOT = { capital_scope = { continent = new_world } }
-				NOT = { capital_scope = { continent = north_america } }
-				NOT = { capital_scope = { continent = south_america } }
-				any_neighbor_country = {
-					has_institution = new_world_i #Better to wait for natural spread
-				}
-			}
+			factor = 0
 		}
 		add_years_of_income = -0.75
 		add_dip_power = -100
-		if = {
+		random_owned_province = {
 			limit = {
-				NOT = { capital_scope = { continent = new_world } }
-				NOT = { capital_scope = { continent = north_america } }
-				NOT = { capital_scope = { continent = south_america } }
-			}
-			random_owned_province = {
-				limit = {
-					has_port = yes
-					OR ={
-						is_state = yes
-						is_capital = yes
-					}
-					NOT = { continent = new_world }
-					NOT = { continent = north_america }
-					NOT = { continent = south_america }
-				}
-				add_institution_embracement = {
-					which = new_world_i
-					value = 100
+				has_port = yes
+				OR ={
+					is_state = yes
+					is_capital = yes
 				}
 			}
-		}
-		if = {
-			limit = {
-				OR = {
-					capital_scope = { continent = new_world }
-					capital_scope = { continent = north_america }
-					capital_scope = { continent = south_america }
-				}
-			}
-			capital_scope = {
-				add_institution_embracement = {
-					which = new_world_i
-					value = 100
-				}
+			add_institution_embracement = {
+				which = new_world_i
+				value = 100
 			}
 		}
 	}
@@ -1360,16 +1150,6 @@ country_event = {
 		name = institution_events.20.b #
 		ai_chance = {
 			factor = 10
-			modifier = {
-				factor = 0
-				capital_scope = {
-					OR = {
-						continent = new_world
-						continent = north_america
-						continent = south_america
-					}
-				}
-			}
 		}
 		add_prestige = -5
 	}
@@ -1390,64 +1170,7 @@ country_event = {
 		picture = GLOBAL_TRADE_eventPicture
 	}
 	
-	desc = {
-		trigger = {
-			any_active_trade_node = {
-				any_trade_node_member_country = {
-					has_institution = new_world_i
-				}
-				any_trade_node_member_province = {
-					owned_by = ROOT
-					continent = europe
-					NOT = { new_world_i = 100 }
-					OR = {
-						trade_goods = grain
-						base_manpower = 4
-					}
-				}
-			}
-		}
-		desc = institution_events.21.da #Europe
-	}
-	desc = {
-		trigger = {
-			any_active_trade_node = {
-				any_trade_node_member_country = {
-					has_institution = new_world_i
-				}
-				any_trade_node_member_province = {
-					owned_by = ROOT
-					NOT = { continent = europe }
-					NOT = { continent = africa }
-					NOT = { new_world_i = 100 }
-					OR = {
-						trade_goods = grain
-						base_manpower = 4
-					}
-				}
-			}
-		}
-		desc = institution_events.21.db #Asia & Oceania
-	}
-	desc = {
-		trigger = {
-			any_active_trade_node = {
-				any_trade_node_member_country = {
-					has_institution = new_world_i
-				}
-				any_trade_node_member_province = {
-					owned_by = ROOT
-					continent = africa
-					NOT = { new_world_i = 100 }
-					OR = {
-						trade_goods = grain
-						base_manpower = 4
-					}
-				}
-			}
-		}
-		desc = institution_events.21.dc #Africa (currently the same as db but may be changed in the future.
-	}
+	desc = institution_events.21.da #Europe
 	
 	trigger = {
 		is_institution_enabled = new_world_i
@@ -2713,33 +2436,7 @@ province_event = {
 	id = institution_events.73
 	title = institution_events.73.t #Healthy Criticism?
 	picture = GOOD_WITH_MONARCH_eventPicture
-	
-	desc = {
-		trigger = {
-			owner = {
-				religion_group = christian
-			}
-		}
-		desc = institution_events.73.da #Coffee Houses
-	}
-	desc = {
-		trigger = {
-			owner = {
-				religion_group = muslim
-			}
-		}
-		desc = institution_events.73.db #Shadowplay
-	}
-	
-	#desc = {
-	#	trigger = {
-	#		owner = {
-	#			NOT = { religion_group = muslim }
-	#			NOT = { religion_group = christian }
-	#		}
-	#	}
-	#	desc = institution_events.73.dc #ROTW
-	#}
+	desc = institution_events.73.da #Coffee Houses
 	
 	is_mtth_scaled_to_size = 1
 	
@@ -2754,10 +2451,6 @@ province_event = {
 		any_neighbor_province = {
 			owned_by = ROOT
 			NOT = { enlightenment = 100 }
-		}
-		OR = {
-			religion_group = muslim
-			religion_group = christian
 		}
 	}
 
