@@ -1,0 +1,320 @@
+# For specific combinations of culture, religion and other such triggers
+# Will pick the first valid one it finds in list
+
+#Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+
+
+revolutionary_peasant_republic = {
+	rank = {
+		3 = REVOLUTIONARY_PEASANT_REPUBLIC
+	}
+
+	ruler_male = {
+		3 = GREAT_CONSUL
+	}
+
+	ruler_female = {
+		3 = GREAT_CONSULESS
+	}
+
+	trigger = {
+		is_revolutionary_republic_trigger = yes
+		have_had_reform = peasants_republic
+		government_rank = 3
+	}
+}
+
+gov_revolutionary_republic = {
+	rank = {
+		1 = GOV_REVOLUTIONARY_REPUBLIC
+		2 = GOV_REVOLUTIONARY_REPUBLIC
+		3 = GOV_REVOLUTIONARY_REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = CONSUL
+		2 = CONSUL
+		3 = CONSUL
+	}
+
+	ruler_female = {
+		1 = CONSULESS
+		2 = CONSULESS
+		3 = CONSULESS
+	}
+
+	trigger = {
+		is_revolutionary_republic_trigger = yes
+	}
+}
+
+gov_admiralty = {
+	rank = {
+		1 = ADMIRALTY
+		2 = HIGH_ADMIRALTY
+		3 = SUPREME_ADMIRALTY
+	}
+	
+	ruler_male = {
+		1 = LORD_HIGH_ADMIRAL
+		2 = LORD_HIGH_ADMIRAL
+		3 = SUPREME_ADMIRAL
+	}
+	
+	ruler_female = {
+		1 = LORD_HIGH_ADMIRAL
+		2 = LORD_HIGH_ADMIRAL
+		3 = SUPREME_ADMIRAL
+	}
+	
+	trigger = {
+		has_reform = admiralty_reform
+	}
+}
+
+gov_english_commonwealth = {
+	rank = {
+		1 = COMMONWEALTH
+		2 = COMMONWEALTH
+		3 = COMMONWEALTH
+	}
+	
+	ruler_male = {
+		1 = LORD_PROTECTOR
+		2 = LORD_PROTECTOR
+		3 = LORD_PROTECTOR
+	}
+	
+	ruler_female = {
+		1 = LADY_PROTECTOR
+		2 = LADY_PROTECTOR
+		3 = LADY_PROTECTOR
+	}
+	
+	trigger = {
+		has_reform = protectorate_parliament_reform
+	}
+}
+
+military_dictatorship = {
+	rank = {
+		1 = MILITARY_GOVERNMENT
+		2 = MILITARY_GOVERNMENT
+		3 = MILITARY_GOVERNMENT
+	}
+	ruler_male = {
+		1 = CAPTAIN_GENERAL
+		2 = CAPTAIN_GENERAL
+		3 = CAPTAIN_GENERAL
+	}
+	ruler_female = {
+		1 = CAPTAIN_GENERAL
+		2 = CAPTAIN_GENERAL
+		3 = CAPTAIN_GENERAL
+	}
+	trigger = {
+		has_reform = military_dictatorship_reform
+	}
+}
+
+pirate_government = {
+	rank = {
+		1 = PIRATE_REPUBLIC
+		2 = PIRATE_CONFEDERACY
+		3 = GRAND_PIRATE_CONFEDERACY
+	}
+
+	ruler_male = {
+		1 = CAPTAIN
+		2 = GRAND_CAPTAIN
+		3 = GRAND_ADMIRAL
+	}
+
+	ruler_female = {
+		1 = CAPTAIN_fem
+		2 = GRAND_CAPTAIN_fem
+		3 = ADMIRAL_fem
+	}
+
+	trigger = {
+		has_reform = pirate_republic_reform
+		NOT = { has_reform = pirate_king_reform }
+	}
+}
+
+pirate_kingdom = {
+	rank = {
+		1 = PIRATE_PRINCIPALITY
+		2 = PIRATE_KINGDOM
+		3 = PIRATE_EMPIRE
+	}
+
+	ruler_male = {
+		1 = PIRATE_PRINCE
+		2 = PIRATE_KING
+		3 = PIRATE_EMPEROR
+	}
+
+	ruler_female = {
+		1 = PIRATE_PRINCESS
+		2 = PIRATE_QUEEN
+		3 = PIRATE_EMPRESS
+	}
+
+	trigger = {
+		has_reform = pirate_king_reform
+	}
+}
+
+synthetic_nation = {
+	rank = {
+		1 = SYNTH_GOV
+		2 = SYNTH_GOV
+		3 = SYNTH_GOV
+	}
+	ruler_male = {
+		1 = SYNTH_RULER
+		2 = SYNTH_RULER
+		3 = SYNTH_RULER
+	}
+	ruler_female = {
+		1 = SYNTH_RULER_fem
+		2 = SYNTH_RULER_fem
+		3 = SYNTH_RULER_fem
+	}
+	trigger = {
+		tag = SYN
+	}
+}
+
+march_christian_monarchy = {
+	rank = {
+		1 = MARCH
+		2 = VICEROYALTY
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = MARGRAVE
+		2 = VICEROY
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = MARGRAVINE
+		2 = VICEREINE	
+		3 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = MARGRAVE_CONSORT
+		2 = VICEROY_CONSORT
+		3 = EMPEROR_CONSORT
+	}
+
+	consort_female = {
+		1 = MARGRAVINE
+		2 = VICEREINE
+		3 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		is_march = yes
+	}
+}
+
+irish_peerage_monarchy = {
+	rank = {
+		1 = EARLDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = EARL
+		2 = HIGH_KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = HIGH_QUEEN
+		3 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = irish
+		OR = {
+			always = no
+		}
+	}
+}
+
+irish_clan_monarchy = {
+	rank = {
+		1 = KINGDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = KING
+		2 = HIGH_KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = QUEEN
+		2 = HIGH_QUEEN
+		3 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = irish
+	}
+}
+
+hebridean_monarchy = {
+	rank = {
+		1 = LORDSHIP
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = LORD
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = LADY
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	trigger = {
+		primary_culture = highland_scottish
+	}
+}
+
+gov_free_city = {
+	rank = {
+		1 = FREE_CITY
+	}
+
+	ruler_male = {
+		1 = MAYOR
+	}
+
+	ruler_female = {
+		1 = MAYORESS
+	}
+
+	trigger = {
+		has_reform = free_city
+	}
+}
