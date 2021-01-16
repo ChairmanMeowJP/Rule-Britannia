@@ -2,4 +2,6 @@
 britain_superregion = {
 	england_region
 	wales_region
+	scotland_region
+	ireland_region
 }

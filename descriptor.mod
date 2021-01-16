@@ -13,6 +13,7 @@ replace_path="decisions"
 replace_path="customizable_localization"
 replace_path="common/achievements.txt"
 replace_path="common/disasters"
+replace_path="common/bookmarks"
 tags={
 	"Historical"
 	"Overhaul"
