@@ -21,6 +21,7 @@ england_region = {
 		cornwall_area
 		worcestershire_area
 		warwickshire_area
+		unused_area
 	}
 }
 
